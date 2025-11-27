@@ -4,3 +4,4 @@
 *.tfvars
 *.pem
 .DS_Store
+*.lock
