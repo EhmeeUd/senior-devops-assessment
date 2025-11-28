@@ -1,0 +1,20 @@
+aws_region  = "us-west-2"
+environment = "dev"
+
+vpc_cidr             = "10.0.0.0/16"
+public_subnet_cidrs  = ["10.0.1.0/24", "10.0.2.0/24"]
+private_subnet_cidrs = ["10.0.10.0/24", "10.0.11.0/24"]
+
+ec2_instance_type = "t3.micro"
+key_name          = "key_name"
+allowed_ssh_cidrs = ["YOUR_IP/32"]
+
+db_name               = "appdb"
+db_username           = "admin"
+db_password           = "password"
+db_instance_class     = "db.t3.micro"
+db_allocated_storage  = 16
+db_engine             = "postgres"
+db_engine_version     = "15.4"
+db_multi_az           = false
+db_backup_retention_days = 7
