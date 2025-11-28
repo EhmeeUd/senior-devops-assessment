@@ -1,0 +1,23 @@
+aws_region  = "us-west-2"
+environment = "staging"
+
+# VPC
+vpc_cidr             = ""
+public_subnet_cidrs  = ["", ""]
+private_subnet_cidrs = ["", ""]
+
+# EC2
+ec2_instance_type = "instance-type"
+key_name          = "key-name"
+allowed_ssh_cidrs = [""]
+
+# RDS
+db_name                  = "stagingdbname"
+db_username              = "stagingUser"
+db_password              = "stagingPassword"
+db_instance_class        = ""
+db_allocated_storage     = 
+db_engine                = ""
+db_engine_version        = ""
+db_multi_az              = false
+db_backup_retention_days = 3
