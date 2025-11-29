@@ -29,14 +29,56 @@ terraform workspace new production
 terraform workspace select staging
 terraform apply
 
+### Destroy
+terraform destroy
+
+### Destroy Workspace
+terraform workspace select production
+terraform workspace delete staging
+
+### Using the deploy Script
+./deploy.sh production
+./deploy.sh staging
+
+### Destroy using the destroy script
+./destroy.sh production
+./destroy.sh staging
+
 ## Modules
 - **vpc**: Creates VPC, subnets, IGW, NAT
 - **ec2**: Launches EC2 with security group
 - **rds**: Creates RDS instance in private subnet
 
-## Design Decisions
-- Private subnets for RDS (security)
-- Public subnet for EC2 (bastion/app server)
-- Variables for reusability
-- Remote state for team collaboration
-```
+## Design Decisions & Best Practices
+
+### Security
+- ✅ RDS in private subnets (no public access)
+- ✅ Security groups with least privilege
+- ✅ Encrypted EBS volumes
+- ✅ Encrypted RDS storage
+- ✅ IMDSv2 enforced on EC2
+- ✅ Sensitive variables marked as sensitive
+
+### High Availability
+- ✅ Multi-AZ support for RDS
+- ✅ Resources spread across 2 AZs
+- ✅ NAT Gateway for private subnet internet access
+
+### Cost Optimization
+- ✅ Single NAT Gateway
+- ✅ t3.micro instances (Free tier eligible)
+- ✅ GP3 storage (cost-effective)
+
+### Operational Excellence
+- ✅ Modular design for reusability
+- ✅ Variables for flexibility
+- ✅ Comprehensive outputs
+- ✅ Automated backups
+- ✅ CloudWatch logs for RDS
+
+### Idempotency
+- ✅ Can run `terraform apply` multiple times safely
+- ✅ No hardcoded values
+- ✅ Proper resource dependencies
+
+---

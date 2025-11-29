@@ -5,3 +5,6 @@
 *.pem
 .DS_Store
 *.lock
+
+environments/*/terraform.tfvars
+environments/terraform.tfvars
