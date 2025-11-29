@@ -2,7 +2,7 @@
 
 ## Prerequisites
 - AWS CLI configured
-- Terraform >= 1.0
+- `Terraform >= 1.0`
 - AWS account with appropriate permissions
 - S3 bucket for remote state
 - DynamoDB table for state locking
@@ -15,34 +15,34 @@
 ## Usage
 
 ### Initialize
-terraform init
+`terraform init`
 
 ### Plan
-terraform plan
+`terraform plan`
 
 ### Apply
-terraform apply
+`terraform apply`
 
 ### Using Workspaces
-terraform workspace new staging
-terraform workspace new production
-terraform workspace select staging
-terraform apply
+`terraform workspace new staging`
+`terraform workspace new production`
+`terraform workspace select staging`
+`terraform apply`
 
 ### Destroy
-terraform destroy
+`terraform destroy`
 
 ### Destroy Workspace
-terraform workspace select production
-terraform workspace delete staging
+`terraform workspace select production`
+`terraform workspace delete staging`
 
 ### Using the deploy Script
-./deploy.sh production
-./deploy.sh staging
+`./deploy.sh production`
+`./deploy.sh staging`
 
 ### Destroy using the destroy script
-./destroy.sh production
-./destroy.sh staging
+`./destroy.sh production`
+`./destroy.sh staging`
 
 ## Modules
 - **vpc**: Creates VPC, subnets, IGW, NAT
