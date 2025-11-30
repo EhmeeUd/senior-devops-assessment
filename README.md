@@ -1,6 +1,6 @@
 # DevOps Assessment - Iniemem Udosen
 
-This repository contains solutions for the DevOps Code Challenge assessment.
+This repository contains solutions for the first 2 DevOps Code Challenge assessment.
 
 ## Repository Structure
 ```
@@ -21,3 +21,17 @@ Modular Terraform setup for VPC, EC2, and RDS with remote state management.
 - Workspace support
 - Security groups
 - Proper tagging
+
+## Task 2: AWS Cloud Security
+Secure infrastructure with IAM, CloudTrail, encryption, and monitoring.
+
+[Full documentation →](task2/README.md)
+
+**Security Features:**
+- Private/public subnet architecture
+- Least privilege IAM
+- CloudTrail API logging
+- VPC Flow Logs
+- Encryption at rest (EBS, S3, RDS)
+- CloudWatch alarms for unauthorized access
+- AWS Config (bonus)
